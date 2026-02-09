@@ -1,0 +1,53 @@
+# Example .claude Configuration for BigQuery Skills
+
+# Skills configuration
+skills:
+  - ./skills/bigquery    # Path to BigQuery skill suite
+
+# Optional: Set default Claude model
+# model: claude-sonnet-4-5-20250929
+
+# Optional: Custom shortcuts/commands
+commands:
+  # Query optimization shortcuts
+  optimize: "Use /bigquery/query-optimization to analyze and optimize this query"
+  check-query: "Use /bigquery/query-optimization to check this query for performance issues"
+  
+  # Data loading shortcuts
+  load-csv: "Use /bigquery/data-loading to import this CSV file"
+  export-data: "Use /bigquery/data-loading to export query results"
+  
+  # ML shortcuts
+  predict: "Use /bigquery/bqml to create a prediction model"
+  train-model: "Use /bigquery/bqml to train a machine learning model"
+  
+  # Cost monitoring shortcuts
+  costs: "Use /bigquery/cost-monitoring to analyze BigQuery spending"
+  expensive-queries: "Use /bigquery/cost-monitoring to find expensive queries"
+  
+  # ETL shortcuts
+  schedule: "Use /bigquery/scheduled-queries to setup automated query"
+  daily-etl: "Use /bigquery/scheduled-queries to create daily ETL pipeline"
+  
+  # Security shortcuts
+  setup-rls: "Use /bigquery/security to setup row-level security"
+  grant-access: "Use /bigquery/security to grant user access"
+  
+  # Schema design shortcuts
+  design-table: "Use /bigquery/schema-design to design table schema"
+  partition-table: "Use /bigquery/schema-design to add partitioning"
+  
+  # Troubleshooting shortcuts
+  debug: "Use /bigquery/troubleshooting to debug this error"
+  fix-error: "Use /bigquery/troubleshooting to resolve this issue"
+
+# Optional: Project-specific settings
+# project_defaults:
+#   gcp_project: "your-project-id"
+#   bigquery_dataset: "your-dataset"
+#   region: "us-central1"
+
+# Optional: Environment variables (if needed)
+# env:
+#   GOOGLE_APPLICATION_CREDENTIALS: "/path/to/service-account.json"
+#   BIGQUERY_PROJECT: "your-project-id"
