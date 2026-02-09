@@ -20,7 +20,7 @@ Choose the method that works best for you:
 
 ```bash
 # 1. Clone repository to a temporary location
-git clone <REPOSITORY_URL> /tmp/claude-skills-temp
+git clone https://github.com/nguyenthanhtat/screen1-claude.git /tmp/claude-skills-temp
 
 # 2. Copy skills to your Claude directory
 cp -r /tmp/claude-skills-temp/skills/bigquery ~/.claude/skills/
@@ -38,7 +38,7 @@ ls ~/.claude/skills/bigquery/
 **Windows (PowerShell):**
 ```powershell
 # 1. Clone repository
-git clone <REPOSITORY_URL> $env:TEMP\claude-skills-temp
+git clone https://github.com/nguyenthanhtat/screen1-claude.git $env:TEMP\claude-skills-temp
 
 # 2. Copy skills
 Copy-Item -Recurse $env:TEMP\claude-skills-temp\skills\bigquery $env:USERPROFILE\.claude\skills\
@@ -59,7 +59,7 @@ Remove-Item -Recurse $env:TEMP\claude-skills-temp
 ```bash
 # 1. Clone to a permanent location
 mkdir -p ~/Development
-git clone <REPOSITORY_URL> ~/Development/screen1-claude
+git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/Development/screen1-claude
 
 # 2. Create symlink (Linux/Mac) or copy (Windows)
 # Linux/Mac:
@@ -96,7 +96,7 @@ cp -r skills/bigquery ~/.claude/skills/
 cd /path/to/your/project
 
 # 2. Clone skills repo
-git clone <REPOSITORY_URL> .claude-skills
+git clone https://github.com/nguyenthanhtat/screen1-claude.git .claude-skills
 
 # 3. Create .claude config file
 cat > .claude << 'EOF'
@@ -125,7 +125,7 @@ git pull origin master
 cd /path/to/your/project
 
 # 2. Add as submodule
-git submodule add <REPOSITORY_URL> .claude-skills
+git submodule add https://github.com/nguyenthanhtat/screen1-claude.git .claude-skills
 
 # 3. Copy skills to user directory
 cp -r .claude-skills/skills/bigquery ~/.claude/skills/

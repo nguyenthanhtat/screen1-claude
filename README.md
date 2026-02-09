@@ -40,7 +40,7 @@ See [INSTALL.md](INSTALL.md) for detailed installation instructions.
 
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/screen1-claude.git ~/claude-skills
+git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/claude-skills
 
 # Copy BigQuery skill to your Claude directory
 cp -r ~/claude-skills/skills/bigquery ~/.claude/skills/
@@ -106,7 +106,7 @@ cp -r skills/bigquery ~/.claude/skills/
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/screen1-claude.git
+git clone https://github.com/nguyenthanhtat/screen1-claude.git
 cd screen1-claude
 
 # Make changes to skills
