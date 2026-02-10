@@ -238,7 +238,9 @@ If you discover useful patterns:
 
 ## 📄 License
 
-Free to use and modify for personal and commercial projects.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+**Summary:** Free to use and modify for personal and commercial projects.
 
 ## 🆘 Support
 
