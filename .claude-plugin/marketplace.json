@@ -2,16 +2,19 @@
   "name": "screen1-claude",
   "version": "1.1.0",
   "description": "Production-ready Claude Code skills for BigQuery and comprehensive testing",
-  "author": "nguyenthanhtat",
   "repository": "https://github.com/nguyenthanhtat/screen1-claude",
-  "skills": [
+  "owner": {
+    "name": "nguyenthanhtat",
+    "url": "https://github.com/nguyenthanhtat"
+  },
+  "plugins": [
     {
       "id": "bigquery",
       "name": "BigQuery Skill Suite",
       "version": "2.0.0",
       "description": "Comprehensive BigQuery skills covering optimization, data management, ML, security, and automation",
+      "type": "skill",
       "path": "skills/bigquery",
-      "author": "nguyenthanhtat",
       "tags": ["bigquery", "gcp", "database", "sql", "optimization", "ml", "security"],
       "readme": "skills/bigquery/README.md"
     },
@@ -20,8 +23,8 @@
       "name": "Test-Fully Skill",
       "version": "1.0.0",
       "description": "Complete testing solution covering unit, integration, E2E, and performance tests for all major languages",
+      "type": "skill",
       "path": "skills/test-fully",
-      "author": "nguyenthanhtat",
       "tags": ["testing", "unit-tests", "integration-tests", "e2e", "jest", "pytest", "junit"],
       "readme": "skills/test-fully/README.md"
     }
