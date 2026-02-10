@@ -1,0 +1,248 @@
+# Example Claude Configuration for Test-Fully Skill
+# Copy this file to your project root as .claude and customize as needed
+
+# ============================================================================
+# SKILLS CONFIGURATION
+# ============================================================================
+
+skills:
+  # Path to test-fully skill
+  # Use one of the following based on your installation method:
+
+  # Option 1: Global installation (skill in ~/.claude/skills/)
+  # - ~/.claude/skills/test-fully  # macOS/Linux
+  # - C:\Users\YOUR_USERNAME\.claude\skills\test-fully  # Windows
+
+  # Option 2: Project-specific installation
+  - ./skills/test-fully
+
+  # Option 3: From screen1-claude repository (git submodule)
+  # - ./.claude/screen1-claude/skills/test-fully
+
+  # Add other skills as needed
+  # - ./skills/bigquery
+  # - ./skills/custom-skill
+
+# ============================================================================
+# CUSTOM COMMANDS (Optional)
+# ============================================================================
+
+commands:
+  # Shortcut commands for common test operations
+
+  # General testing
+  test: "Use /test-fully for comprehensive testing"
+
+  # Focused test types
+  unit: "Use /test-fully --focus unit"
+  integration: "Use /test-fully --focus integration"
+  e2e: "Use /test-fully --focus e2e"
+  perf: "Use /test-fully --focus performance"
+
+  # Quick test generation for specific files
+  test-api: "Use /test-fully src/api/"
+  test-components: "Use /test-fully src/components/"
+  test-utils: "Use /test-fully src/utils/"
+
+  # Test maintenance
+  update-tests: "Use /test-fully update existing tests"
+  improve-coverage: "Use /test-fully improve test coverage"
+
+# ============================================================================
+# MODEL CONFIGURATION (Optional)
+# ============================================================================
+
+# Specify which Claude model to use
+# Options: claude-opus-4-6, claude-sonnet-4-5-20250929, claude-haiku-4-5-20251001
+model: claude-sonnet-4-5-20250929
+
+# ============================================================================
+# TEST PREFERENCES (Optional - for documentation purposes)
+# ============================================================================
+
+# Note: These are for documentation only. The skill will auto-detect your
+# framework, but you can reference these in your prompts.
+
+testPreferences:
+  # Preferred test framework (auto-detected if not specified)
+  # JavaScript: jest, vitest, mocha, jasmine
+  # Python: pytest, unittest, nose2
+  # Java: junit5, junit4, testng
+  framework: jest
+
+  # Coverage settings
+  coverage:
+    enabled: true
+    threshold: 80  # Minimum coverage percentage
+    reports:
+      - html
+      - text
+      - lcov
+
+  # Test execution preferences
+  execution:
+    parallel: true
+    verbose: false
+    watch: false  # Watch mode for development
+
+  # E2E testing preferences
+  e2e:
+    framework: playwright  # or cypress, selenium, puppeteer
+    browsers:
+      - chromium
+      - firefox
+      - webkit
+    headless: true
+
+  # Performance testing
+  performance:
+    enabled: false
+    thresholds:
+      maxDuration: 1000  # milliseconds
+      maxMemory: 50  # MB
+
+# ============================================================================
+# PROJECT-SPECIFIC TEST PATTERNS (Optional)
+# ============================================================================
+
+# Document your team's testing conventions here for reference
+
+testPatterns:
+  # Test file naming
+  naming:
+    unit: "*.test.js"          # or *.spec.js
+    integration: "*.integration.test.js"
+    e2e: "*.e2e.spec.ts"
+
+  # Test organization
+  structure: |
+    tests/
+    ├── unit/
+    ├── integration/
+    └── e2e/
+
+  # Common test utilities location
+  utilities: "tests/helpers/"
+
+  # Fixtures and mocks
+  fixtures: "tests/fixtures/"
+  mocks: "tests/__mocks__/"
+
+# ============================================================================
+# FRAMEWORK-SPECIFIC CONFIGURATION EXAMPLES
+# ============================================================================
+
+# JavaScript/TypeScript (Jest)
+jest:
+  testEnvironment: jsdom  # or node
+  setupFilesAfterEnv:
+    - "<rootDir>/tests/setup.js"
+  collectCoverageFrom:
+    - "src/**/*.{js,jsx,ts,tsx}"
+    - "!src/**/*.d.ts"
+    - "!src/**/*.stories.{js,jsx,ts,tsx}"
+  coverageThreshold:
+    global:
+      branches: 80
+      functions: 80
+      lines: 80
+      statements: 80
+
+# Python (pytest)
+pytest:
+  testpaths: tests
+  python_files: "test_*.py"
+  python_classes: "Test*"
+  python_functions: "test_*"
+  addopts: "--cov=app --cov-report=html --cov-report=term"
+
+# Java (JUnit 5)
+junit:
+  version: "5.9.0"
+  testSourceDirectory: "src/test/java"
+  excludedGroups: "slow,integration"
+
+# ============================================================================
+# HOOKS (Optional - Advanced)
+# ============================================================================
+
+# Run commands before/after certain events
+# hooks:
+#   pre-test:
+#     - "npm run lint"
+#     - "npm run type-check"
+#   post-test:
+#     - "npm run coverage-report"
+
+# ============================================================================
+# EXAMPLE WORKFLOWS
+# ============================================================================
+
+# Example 1: Basic Testing Workflow
+# 1. Write code
+# 2. Run: /test-fully src/module.js
+# 3. Review generated tests
+# 4. Run: npm test
+# 5. Check coverage
+
+# Example 2: TDD Workflow
+# 1. Run: /test-fully --focus unit src/new-feature.js
+# 2. Implement feature to pass tests
+# 3. Run: npm test -- --watch
+# 4. Iterate until all tests pass
+
+# Example 3: Full Test Suite
+# 1. Run: /test-fully --focus unit src/
+# 2. Run: /test-fully --focus integration src/api/
+# 3. Run: /test-fully --focus e2e features/
+# 4. Run: npm test -- --coverage
+# 5. Deploy with confidence
+
+# ============================================================================
+# ENVIRONMENT-SPECIFIC CONFIGS
+# ============================================================================
+
+# Development
+# - Use watch mode
+# - Skip slow tests
+# - In-memory databases
+
+# CI/CD
+# - Run all tests
+# - Enforce coverage thresholds
+# - Generate reports
+
+# Production
+# - Run smoke tests
+# - Monitor performance
+# - Track errors
+
+# ============================================================================
+# NOTES
+# ============================================================================
+
+# 1. This file should be in your project root directory
+# 2. Rename from .claude.example to .claude to activate
+# 3. Add .claude to .gitignore if it contains sensitive paths
+# 4. Update paths based on your installation method
+# 5. Customize commands and preferences for your team
+
+# ============================================================================
+# SUPPORT
+# ============================================================================
+
+# For help and documentation:
+# - Quick Start: skills/test-fully/QUICK_START.md
+# - Full README: skills/test-fully/README.md
+# - Installation: skills/test-fully/INSTALLATION.md
+# - Architecture: skills/test-fully/STRUCTURE.md
+
+# Repository: https://github.com/nguyenthanhtat/screen1-claude
+
+# ============================================================================
+# VERSION
+# ============================================================================
+
+# Config Version: 1.0.0
+# Skill Version: 1.0.0
+# Last Updated: 2025-02-10
