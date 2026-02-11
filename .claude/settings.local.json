@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(git add:*)",
-      "Bash(node -e \"JSON.parse\\(require\\(''fs''\\).readFileSync\\(''.claude-plugin/marketplace.json'', ''utf8''\\)\\); console.log\\(''✅ JSON is valid''\\)\")"
+      "Bash(node -e \"JSON.parse\\(require\\(''fs''\\).readFileSync\\(''.claude-plugin/marketplace.json'', ''utf8''\\)\\); console.log\\(''✅ JSON is valid''\\)\")",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ]
   }
 }
