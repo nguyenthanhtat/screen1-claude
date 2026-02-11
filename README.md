@@ -83,6 +83,17 @@ Comprehensive Git assistance for all workflows, from basics to advanced operatio
 
 **📖 For detailed instructions, see: [TEAM_SETUP.md](TEAM_SETUP.md)**
 
+### Option 1: Marketplace (Easiest!)
+
+Add as a marketplace source in Claude Code:
+```
+https://github.com/nguyenthanhtat/screen1-claude
+```
+
+Then install the skills you want from the marketplace UI.
+
+### Option 2: Automated Scripts
+
 **One-line install (Unix/Mac/Git Bash):**
 ```bash
 git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/claude-skills && cp -r ~/claude-skills/skills/bigquery ~/.claude/skills/ && cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/ && cp -r ~/claude-skills/skills/git ~/.claude/skills/
