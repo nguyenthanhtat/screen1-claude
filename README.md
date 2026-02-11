@@ -57,9 +57,9 @@ Complete testing solution for any codebase covering unit, integration, E2E, and 
 
 ## 🚀 Quick Start for Team Members
 
-### Installation (Copy-Paste - Works Perfectly!)
+### Installation (Simple & Proven to Work!)
 
-**One-line install:**
+**One-line install (Unix/Mac/Git Bash):**
 ```bash
 git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/claude-skills && cp -r ~/claude-skills/skills/bigquery ~/.claude/skills/ && cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/
 ```

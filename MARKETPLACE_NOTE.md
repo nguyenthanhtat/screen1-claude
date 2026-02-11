@@ -1,8 +1,8 @@
 # Marketplace Integration Status
 
-## Current Status: Manual Installation Recommended ✅
+## Current Status: Manual Installation Only ✅
 
-This repository currently uses **manual installation**, which works perfectly and is the recommended method.
+This repository uses **manual installation** exclusively. This is the recommended and proven method.
 
 ### Why Manual Installation?
 
@@ -11,13 +11,15 @@ This repository currently uses **manual installation**, which works perfectly an
 3. **✅ Fast** - Takes ~30 seconds
 4. **✅ No dependencies** - Just needs git
 5. **✅ Team-friendly** - Easy to document and share
+6. **✅ Reliable** - No schema compatibility issues
 
-### Marketplace.json (Experimental)
+### Marketplace Plugin Support
 
-We've included a `.claude-plugin/marketplace.json` file for future marketplace support, but the schema is:
-- Not fully documented in Claude Code
-- Appears to be experimental or in development
-- May require specific formats not yet publicly available
+After extensive testing, Claude Code's marketplace.json schema is:
+- Not publicly documented
+- Appears to be in early development or experimental
+- Multiple schema formats tested without success
+- **Conclusion:** Stick with manual installation for now
 
 ### Installation Methods
 
