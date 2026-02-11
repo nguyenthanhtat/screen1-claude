@@ -12,14 +12,22 @@
       "name": "bigquery-skill-suite",
       "version": "2.0.0",
       "description": "Comprehensive BigQuery skills covering optimization, data management, ML, security, and automation",
-      "source": "https://github.com/nguyenthanhtat/screen1-claude/tree/main/skills/bigquery",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/nguyenthanhtat/screen1-claude.git",
+        "path": "skills/bigquery"
+      },
       "tags": ["bigquery", "gcp", "database", "sql", "optimization", "ml", "security"]
     },
     {
       "name": "test-fully",
       "version": "1.0.0",
       "description": "Complete testing solution covering unit, integration, E2E, and performance tests for all major languages",
-      "source": "https://github.com/nguyenthanhtat/screen1-claude/tree/main/skills/test-fully",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/nguyenthanhtat/screen1-claude.git",
+        "path": "skills/test-fully"
+      },
       "tags": ["testing", "unit-tests", "integration-tests", "e2e", "jest", "pytest", "junit"]
     }
   ]
