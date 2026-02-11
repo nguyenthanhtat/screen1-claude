@@ -59,9 +59,20 @@ Complete testing solution for any codebase covering unit, integration, E2E, and 
 
 ### Installation (Simple & Proven to Work!)
 
+**📖 For detailed instructions, see: [TEAM_SETUP.md](TEAM_SETUP.md)**
+
 **One-line install (Unix/Mac/Git Bash):**
 ```bash
 git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/claude-skills && cp -r ~/claude-skills/skills/bigquery ~/.claude/skills/ && cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/
+```
+
+**Automated install scripts:**
+```bash
+# Unix/Mac/Linux
+curl -s https://raw.githubusercontent.com/nguyenthanhtat/screen1-claude/main/install.sh | bash
+
+# Windows PowerShell (run as admin)
+iwr -useb https://raw.githubusercontent.com/nguyenthanhtat/screen1-claude/main/install.ps1 | iex
 ```
 
 **Or step-by-step:**
