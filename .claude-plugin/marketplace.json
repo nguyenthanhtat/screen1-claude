@@ -7,90 +7,39 @@
     "email": "nguyen@example.com",
     "url": "https://github.com/nguyenthanhtat"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nguyenthanhtat/screen1-claude"
-  },
   "plugins": [
     {
-      "id": "bigquery",
       "name": "bigquery-skill-suite",
-      "displayName": "BigQuery Skill Suite",
       "version": "2.0.0",
-      "description": "Comprehensive BigQuery skills covering optimization, data loading, ML, security, and more. 8 specialized sub-skills for production BigQuery development.",
-      "type": "skill",
-      "source": {
-        "type": "path",
-        "path": "skills/bigquery"
-      },
-      "icon": "📊",
-      "categories": ["data", "analytics", "database"],
-      "tags": ["bigquery", "sql", "gcp", "data-engineering", "machine-learning"],
+      "description": "Comprehensive BigQuery skills covering optimization, data loading, ML, security, and more",
+      "source": "skills/bigquery",
+      "tags": ["bigquery", "sql", "gcp", "data-engineering"],
       "author": {
         "name": "Nguyen Thanh Tat",
         "url": "https://github.com/nguyenthanhtat"
-      },
-      "readme": "skills/bigquery/README.md",
-      "changelog": "skills/bigquery/CHANGELOG.md"
+      }
     },
     {
-      "id": "test-fully",
       "name": "test-fully-skill",
-      "displayName": "Test-Fully",
       "version": "1.0.0",
-      "description": "Complete testing solution for any codebase. Generates comprehensive test suites covering unit, integration, E2E, and performance testing with automatic framework detection.",
-      "type": "skill",
-      "source": {
-        "type": "path",
-        "path": "skills/test-fully"
-      },
-      "icon": "🧪",
-      "categories": ["testing", "quality", "development"],
-      "tags": ["testing", "unit-tests", "integration-tests", "e2e", "jest", "pytest", "junit"],
+      "description": "Complete testing solution for any codebase with automatic framework detection",
+      "source": "skills/test-fully",
+      "tags": ["testing", "unit-tests", "e2e", "jest", "pytest"],
       "author": {
         "name": "Nguyen Thanh Tat",
         "url": "https://github.com/nguyenthanhtat"
-      },
-      "readme": "skills/test-fully/README.md",
-      "changelog": "skills/test-fully/CHANGELOG.md"
+      }
     },
     {
-      "id": "git",
       "name": "git-skill-suite",
-      "displayName": "Git Skill Suite",
       "version": "1.0.0",
-      "description": "Comprehensive Git assistance for all workflows, from basics to advanced operations. 8 specialized sub-skills covering everything from fundamentals to power user features.",
-      "type": "skill",
-      "source": {
-        "type": "path",
-        "path": "skills/git"
-      },
-      "icon": "🔧",
-      "categories": ["version-control", "development", "collaboration"],
-      "tags": ["git", "version-control", "github", "gitlab", "workflow", "branching"],
+      "description": "Comprehensive Git assistance for all workflows from basics to advanced operations",
+      "source": "skills/git",
+      "tags": ["git", "version-control", "github", "workflow"],
       "author": {
         "name": "Nguyen Thanh Tat",
         "url": "https://github.com/nguyenthanhtat"
-      },
-      "readme": "skills/git/README.md",
-      "changelog": "skills/git/CHANGELOG.md"
+      }
     }
-  ],
-  "license": "MIT",
-  "homepage": "https://github.com/nguyenthanhtat/screen1-claude",
-  "bugs": {
-    "url": "https://github.com/nguyenthanhtat/screen1-claude/issues"
-  },
-  "keywords": [
-    "bigquery",
-    "testing",
-    "git",
-    "data-engineering",
-    "version-control",
-    "sql",
-    "gcp",
-    "automation",
-    "workflows",
-    "skills"
   ]
 }
