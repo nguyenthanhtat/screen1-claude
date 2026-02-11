@@ -1,0 +1,118 @@
+# Example Claude Configuration for Git Skill
+
+# Copy this to ~/.claude/.claude and customize as needed
+
+# Enable Git skill
+skills:
+  - ~/.claude/skills/git
+
+# Optional: Custom shortcuts for Git operations
+commands:
+  # Basic operations
+  gst: "Use /git/basics to check status and commit workflow"
+  gcommit: "Use /git/basics for commit workflow with best practices"
+  ginit: "Use /git/basics to initialize new repository"
+  gignore: "Use /git/basics to create .gitignore file"
+
+  # Branching
+  gbranch: "Use /git/branching for branch operations"
+  gmerge: "Use /git/branching to merge branches"
+  grebase: "Use /git/branching to rebase current branch"
+  gclean: "Use /git/branching to clean up and delete merged branches"
+
+  # History and inspection
+  glog: "Use /git/history to view commit history"
+  gdiff: "Use /git/history to compare changes"
+  gblame: "Use /git/history to find who changed a line"
+  gfind: "Use /git/history to find when bug was introduced with bisect"
+
+  # Remote operations
+  gpush: "Use /git/remote to push changes to remote"
+  gpull: "Use /git/remote to pull latest changes"
+  gsync: "Use /git/remote to sync fork with upstream"
+  gfork: "Use /git/remote to set up fork workflow"
+
+  # Conflict resolution
+  gconflict: "Use /git/conflicts to resolve merge conflicts"
+  gmergetool: "Use /git/conflicts to use merge tool for conflicts"
+  gabort: "Use /git/conflicts to abort merge or rebase"
+
+  # Undo operations
+  gundo: "Use /git/undo to undo changes safely"
+  gunstage: "Use /git/undo to unstage files"
+  greset: "Use /git/undo to reset commits"
+  grevert: "Use /git/undo to safely revert commits"
+  grecover: "Use /git/undo to recover deleted commits with reflog"
+
+  # Workflows
+  gflow: "Use /git/workflows to learn about Git workflows"
+  gpr: "Use /git/workflows for pull request best practices"
+  greview: "Use /git/workflows for code review process"
+
+  # Advanced
+  gstash: "Use /git/advanced to stash uncommitted changes"
+  gcherry: "Use /git/advanced to cherry-pick commits"
+  ghook: "Use /git/advanced to set up Git hooks"
+  gworktree: "Use /git/advanced to work on multiple branches"
+
+# Optional: Aliases for common Git workflows
+# Uncomment and customize as needed
+
+# commands:
+#   # Quick commit workflow
+#   commit: "Use /git/basics to commit with conventional commits format"
+#
+#   # Feature branch workflow
+#   feature: "Use /git/branching to create feature branch and push"
+#   finish: "Use /git/branching to merge feature and clean up"
+#
+#   # Hotfix workflow
+#   hotfix: "Use /git/workflows for hotfix process"
+#
+#   # Code review
+#   review: "Use /git/workflows to prepare code for review"
+#
+#   # Emergency undo
+#   oops: "Use /git/undo to fix last mistake"
+#
+#   # Sync with team
+#   sync: "Use /git/remote to sync with team repository"
+
+# Optional: Configure Git-related environment variables
+# env:
+#   GIT_EDITOR: "code --wait"
+#   GIT_PAGER: "less -R"
+
+# Optional: Project-specific Git settings
+# This section can be customized per project
+
+# For open source projects
+# commands:
+#   contribute: "Use /git/workflows for forking workflow and PR process"
+#
+# For team projects
+# commands:
+#   teamflow: "Use /git/workflows to follow team's GitHub Flow process"
+
+# Optional: Integration with other tools
+# commands:
+#   ghpr: "Use /git/workflows to create PR, then use gh pr create"
+#   ghreview: "Use gh pr review after code review with /git/workflows"
+
+# Tips:
+# 1. Copy this file to ~/.claude/.claude
+# 2. Uncomment and customize shortcuts you'll use
+# 3. Keep shortcuts short and memorable
+# 4. Prefix with 'g' to avoid conflicts (gcommit, gbranch, etc.)
+# 5. Test shortcuts: try them in Claude Code CLI
+
+# Example usage after configuration:
+#   /gcommit          → Routes to /git/basics commit workflow
+#   /gbranch          → Routes to /git/branching operations
+#   /gundo            → Routes to /git/undo for recovery
+#   /gconflict        → Routes to /git/conflicts for resolution
+
+# Note: Shortcuts are optional. You can always use:
+#   /git [question]                  → Auto-routing
+#   /git/basics                      → Direct sub-skill access
+#   /git/basics help me commit       → Sub-skill with question

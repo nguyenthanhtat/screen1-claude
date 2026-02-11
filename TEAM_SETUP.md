@@ -7,7 +7,7 @@ Simple instructions for installing Claude Code skills on your computer.
 ### For Mac / Linux / Git Bash (Windows)
 
 ```bash
-git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/claude-skills && cp -r ~/claude-skills/skills/bigquery ~/.claude/skills/ && cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/
+git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/claude-skills && cp -r ~/claude-skills/skills/bigquery ~/.claude/skills/ && cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/ && cp -r ~/claude-skills/skills/git ~/.claude/skills/
 ```
 
 ### For Windows PowerShell
@@ -16,6 +16,7 @@ git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/claude-skills &
 git clone https://github.com/nguyenthanhtat/screen1-claude.git $env:USERPROFILE\claude-skills
 Copy-Item -Recurse $env:USERPROFILE\claude-skills\skills\bigquery $env:USERPROFILE\.claude\skills\
 Copy-Item -Recurse $env:USERPROFILE\claude-skills\skills\test-fully $env:USERPROFILE\.claude\skills\
+Copy-Item -Recurse $env:USERPROFILE\claude-skills\skills\git $env:USERPROFILE\.claude\skills\
 ```
 
 ### Test Installation
@@ -24,6 +25,7 @@ Open Claude Code and type:
 ```
 /bigquery
 /test-fully
+/git
 ```
 
 If you see the skill information, it's working! ✅
@@ -51,9 +53,10 @@ git clone https://github.com/nguyenthanhtat/screen1-claude.git $env:USERPROFILE\
 # Create skills directory if it doesn't exist
 mkdir -p ~/.claude/skills
 
-# Copy both skills
+# Copy all three skills
 cp -r ~/claude-skills/skills/bigquery ~/.claude/skills/
 cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/
+cp -r ~/claude-skills/skills/git ~/.claude/skills/
 ```
 
 **Windows PowerShell:**
@@ -61,9 +64,10 @@ cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/
 # Create skills directory if it doesn't exist
 New-Item -ItemType Directory -Force -Path $env:USERPROFILE\.claude\skills
 
-# Copy both skills
+# Copy all three skills
 Copy-Item -Recurse $env:USERPROFILE\claude-skills\skills\bigquery $env:USERPROFILE\.claude\skills\
 Copy-Item -Recurse $env:USERPROFILE\claude-skills\skills\test-fully $env:USERPROFILE\.claude\skills\
+Copy-Item -Recurse $env:USERPROFILE\claude-skills\skills\git $env:USERPROFILE\.claude\skills\
 ```
 
 ### Step 3: Verify Installation
@@ -73,13 +77,13 @@ Check that files are in the right place:
 **Mac/Linux/Git Bash:**
 ```bash
 ls ~/.claude/skills/
-# Should show: bigquery  test-fully
+# Should show: bigquery  git  test-fully
 ```
 
 **Windows PowerShell:**
 ```powershell
 Get-ChildItem $env:USERPROFILE\.claude\skills\
-# Should show: bigquery  test-fully
+# Should show: bigquery  git  test-fully
 ```
 
 ### Step 4: Test in Claude Code
@@ -87,6 +91,7 @@ Get-ChildItem $env:USERPROFILE\.claude\skills\
 1. Open Claude Code
 2. Type: `/bigquery`
 3. Type: `/test-fully`
+4. Type: `/git`
 
 If both commands show skill information, you're done! ✅
 
@@ -102,6 +107,7 @@ cd ~/claude-skills
 git pull origin main
 cp -r skills/bigquery ~/.claude/skills/
 cp -r skills/test-fully ~/.claude/skills/
+cp -r skills/git ~/.claude/skills/
 ```
 
 **Windows PowerShell:**
@@ -110,6 +116,7 @@ cd $env:USERPROFILE\claude-skills
 git pull origin main
 Copy-Item -Recurse -Force skills\bigquery $env:USERPROFILE\.claude\skills\
 Copy-Item -Recurse -Force skills\test-fully $env:USERPROFILE\.claude\skills\
+Copy-Item -Recurse -Force skills\git $env:USERPROFILE\.claude\skills\
 ```
 
 ---
@@ -135,6 +142,7 @@ Copy-Item -Recurse -Force skills\test-fully $env:USERPROFILE\.claude\skills\
    # Mac/Linux/Git Bash
    ls ~/.claude/skills/bigquery/SKILL.md
    ls ~/.claude/skills/test-fully/SKILL.md
+   ls ~/.claude/skills/git/SKILL.md
    ```
 
 ### Problem: Permission denied

@@ -55,6 +55,28 @@ Complete testing solution for any codebase covering unit, integration, E2E, and 
 - **Java:** JUnit 5, JUnit 4, TestNG
 - **E2E:** Playwright, Cypress, Selenium, Puppeteer
 
+### Git Skill Suite v1.0.0
+
+Comprehensive Git assistance for all workflows, from basics to advanced operations:
+
+- **basics** - Repository setup, commits, .gitignore, and fundamental workflows
+- **branching** - Branch management, merging, rebasing, and branch strategies
+- **history** - Commit history, diffs, blame, bisect, and code archaeology
+- **remote** - Remote operations, push/pull, multiple remotes, and fork syncing
+- **conflicts** - Merge and rebase conflict resolution strategies
+- **undo** - Undo changes, reset, revert, and reflog recovery
+- **workflows** - GitHub Flow, Git Flow, trunk-based, PR best practices
+- **advanced** - Stash, cherry-pick, hooks, submodules, worktrees, LFS
+
+**Features:**
+- Auto-routing based on Git keywords
+- Beginner to advanced learning path
+- Real-world workflows (GitHub Flow, Git Flow, trunk-based)
+- Conflict resolution strategies
+- Undo and recovery with reflog
+- Team collaboration patterns
+- Advanced power features
+
 ## 🚀 Quick Start for Team Members
 
 ### Installation (Simple & Proven to Work!)
@@ -63,7 +85,7 @@ Complete testing solution for any codebase covering unit, integration, E2E, and 
 
 **One-line install (Unix/Mac/Git Bash):**
 ```bash
-git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/claude-skills && cp -r ~/claude-skills/skills/bigquery ~/.claude/skills/ && cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/
+git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/claude-skills && cp -r ~/claude-skills/skills/bigquery ~/.claude/skills/ && cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/ && cp -r ~/claude-skills/skills/git ~/.claude/skills/
 ```
 
 **Automated install scripts:**
@@ -83,10 +105,12 @@ git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/claude-skills
 # 2. Copy skills to your Claude directory
 cp -r ~/claude-skills/skills/bigquery ~/.claude/skills/
 cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/
+cp -r ~/claude-skills/skills/git ~/.claude/skills/
 
 # 3. Test in Claude Code
 # Run: /bigquery
 # Run: /test-fully
+# Run: /git
 ```
 
 **Windows (PowerShell):**
@@ -94,6 +118,7 @@ cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/
 git clone https://github.com/nguyenthanhtat/screen1-claude.git $env:USERPROFILE\claude-skills
 Copy-Item -Recurse $env:USERPROFILE\claude-skills\skills\bigquery $env:USERPROFILE\.claude\skills\
 Copy-Item -Recurse $env:USERPROFILE\claude-skills\skills\test-fully $env:USERPROFILE\.claude\skills\
+Copy-Item -Recurse $env:USERPROFILE\claude-skills\skills\git $env:USERPROFILE\.claude\skills\
 ```
 
 See [INSTALL.md](INSTALL.md) for more installation options.
@@ -127,6 +152,23 @@ Once installed, use in Claude Code:
 /test-fully src/features/auth/
 ```
 
+**Git Skill:**
+```bash
+# Auto-routing (recommended)
+/git how do I commit changes?
+/git create a feature branch
+/git I have a merge conflict
+/git undo my last commit
+
+# Direct sub-skill access
+/git/basics help me make first commit
+/git/branching create and merge feature branch
+/git/conflicts resolve merge conflict
+/git/undo fix my commit message
+/git/workflows explain GitHub Flow
+/git/advanced stash my changes
+```
+
 ## 📁 Repository Structure
 
 ```
@@ -137,18 +179,29 @@ screen1-claude/
 │   │   ├── README.md         # Usage guide
 │   │   ├── DEPLOYMENT.md     # Deployment instructions
 │   │   └── [8 sub-skills]/   # Specialized skills
-│   └── test-fully/           # Test-Fully skill
-│       ├── SKILL.md          # Core testing logic
+│   ├── test-fully/           # Test-Fully skill
+│   │   ├── SKILL.md          # Core testing logic
+│   │   ├── README.md         # Usage guide
+│   │   ├── QUICK_START.md    # 5-minute getting started
+│   │   ├── INSTALLATION.md   # Detailed install guide
+│   │   ├── STRUCTURE.md      # Architecture docs
+│   │   └── .claude.example   # Config template
+│   └── git/                  # Git skill suite
+│       ├── SKILL.md          # Main router
 │       ├── README.md         # Usage guide
 │       ├── QUICK_START.md    # 5-minute getting started
 │       ├── INSTALLATION.md   # Detailed install guide
 │       ├── STRUCTURE.md      # Architecture docs
-│       └── .claude.example   # Config template
+│       ├── .claude.example   # Config template
+│       └── [8 sub-skills]/   # basics, branching, history, etc.
 ├── commands/                  # Custom commands (future)
 ├── tests/                     # Test suite (future)
 ├── docs/                      # Documentation
 │   └── SKILLS_DEVELOPMENT.md # Development guide
 ├── INSTALL.md                 # Installation guide
+├── TEAM_SETUP.md              # Team setup guide
+├── install.sh                 # Unix/Mac install script
+├── install.ps1                # Windows install script
 └── README.md                  # This file
 ```
 
@@ -168,6 +221,12 @@ screen1-claude/
 - **[skills/test-fully/INSTALLATION.md](skills/test-fully/INSTALLATION.md)** - Installation instructions
 - **[skills/test-fully/STRUCTURE.md](skills/test-fully/STRUCTURE.md)** - Architecture and design
 
+### Git Skill
+- **[skills/git/QUICK_START.md](skills/git/QUICK_START.md)** - Get started in 5 minutes
+- **[skills/git/README.md](skills/git/README.md)** - Complete usage guide
+- **[skills/git/INSTALLATION.md](skills/git/INSTALLATION.md)** - Installation instructions
+- **[skills/git/STRUCTURE.md](skills/git/STRUCTURE.md)** - Architecture and design
+
 ## 🔄 Keeping Skills Updated
 
 ```bash
@@ -178,6 +237,7 @@ git pull origin master
 # Copy updated skills
 cp -r skills/bigquery ~/.claude/skills/
 cp -r skills/test-fully ~/.claude/skills/
+cp -r skills/git ~/.claude/skills/
 
 # Restart Claude Code if needed
 ```
@@ -242,6 +302,17 @@ If you discover useful patterns:
 
 ## 📝 Version History
 
+### v1.2.0 (2025-02-11)
+- Added Git Skill Suite v1.0.0
+  - 8 specialized sub-skills for Git operations
+  - Comprehensive patterns for all Git workflows
+  - Beginner to advanced learning path
+  - Team collaboration best practices
+  - Conflict resolution strategies
+  - Undo and recovery with reflog
+  - Advanced operations (stash, cherry-pick, hooks, worktrees)
+  - Complete documentation suite
+
 ### v1.1.0 (2025-02-10)
 - Added Test-Fully Skill v1.0.0
   - Comprehensive testing for all major languages
@@ -269,6 +340,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **For Skill Usage Questions:**
 - BigQuery: Check `skills/bigquery/README.md` or use `/bigquery/troubleshooting`
 - Test-Fully: Check `skills/test-fully/README.md` or `skills/test-fully/QUICK_START.md`
+- Git: Check `skills/git/README.md` or `skills/git/QUICK_START.md`
 - General: Review `docs/SKILLS_DEVELOPMENT.md`
 
 **For Repository Issues:**

@@ -29,12 +29,16 @@ Copy-Item -Recurse -Force "$repoPath\skills\bigquery" "$skillsPath\"
 Write-Host "📋 Installing Test-Fully Skill..." -ForegroundColor Yellow
 Copy-Item -Recurse -Force "$repoPath\skills\test-fully" "$skillsPath\"
 
+Write-Host "📋 Installing Git Skill Suite..." -ForegroundColor Yellow
+Copy-Item -Recurse -Force "$repoPath\skills\git" "$skillsPath\"
+
 Write-Host ""
 Write-Host "✅ Installation complete!" -ForegroundColor Green
 Write-Host ""
 Write-Host "📖 Test your installation:" -ForegroundColor Cyan
 Write-Host "   /bigquery" -ForegroundColor White
 Write-Host "   /test-fully" -ForegroundColor White
+Write-Host "   /git" -ForegroundColor White
 Write-Host ""
 Write-Host "📚 Documentation: https://github.com/nguyenthanhtat/screen1-claude" -ForegroundColor Cyan
 Write-Host ""

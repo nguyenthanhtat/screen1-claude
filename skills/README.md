@@ -172,6 +172,57 @@ Complete BigQuery skill suite with 8 specialized sub-skills covering optimizatio
 
 ---
 
+### 🔧 git v1.0.0
+
+**Comprehensive Git assistance for all workflows**
+
+Complete Git skill suite with 8 specialized sub-skills covering everything from basics to advanced operations. Perfect for developers of all skill levels learning or mastering Git.
+
+#### Sub-Skills
+- **basics** - Repository setup, commits, .gitignore, and fundamental workflows
+- **branching** - Branch management, merging, rebasing, and branch strategies
+- **history** - Commit history, diffs, blame, bisect, and code archaeology
+- **remote** - Remote operations, push/pull, multiple remotes, and fork syncing
+- **conflicts** - Merge and rebase conflict resolution strategies
+- **undo** - Undo changes, reset, revert, and reflog recovery
+- **workflows** - GitHub Flow, Git Flow, trunk-based, PR best practices
+- **advanced** - Stash, cherry-pick, hooks, submodules, worktrees, LFS
+
+#### Features
+- Auto-routing based on Git keywords
+- Beginner to advanced learning path
+- Real-world workflows (GitHub Flow, Git Flow, trunk-based)
+- Conflict resolution strategies
+- Undo and recovery with reflog
+- Team collaboration patterns
+- Advanced power features
+
+#### Usage Examples
+
+```bash
+# Auto-routing (Claude decides which sub-skill)
+/git how do I commit changes
+/git create a feature branch
+/git I have a merge conflict
+/git undo my last commit
+
+# Direct sub-skill access
+/git/basics help me make first commit
+/git/branching create and merge feature branch
+/git/conflicts resolve merge conflict
+/git/undo fix my commit message
+/git/workflows explain GitHub Flow
+/git/advanced stash my changes
+```
+
+#### Documentation
+- **[QUICK_START.md](git/QUICK_START.md)** - Get started in 5 minutes
+- **[README.md](git/README.md)** - Complete usage guide
+- **[INSTALLATION.md](git/INSTALLATION.md)** - Installation instructions
+- **[STRUCTURE.md](git/STRUCTURE.md)** - Architecture overview
+
+---
+
 ## Installation
 
 ### Quick Install
@@ -183,14 +234,17 @@ git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/claude-skills
 # Copy skills to Claude directory
 cp -r ~/claude-skills/skills/bigquery ~/.claude/skills/
 cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/
+cp -r ~/claude-skills/skills/git ~/.claude/skills/
 
 # Verify installation
 ls ~/.claude/skills/bigquery/SKILL.md
 ls ~/.claude/skills/test-fully/SKILL.md
+ls ~/.claude/skills/git/SKILL.md
 
 # Test in Claude Code
 # Run: /bigquery
 # Run: /test-fully
+# Run: /git
 ```
 
 See [../INSTALL.md](../INSTALL.md) for detailed installation instructions.
@@ -300,6 +354,7 @@ npm test
 skills:
   - /Users/username/.claude/skills/bigquery
   - /Users/username/.claude/skills/test-fully
+  - /Users/username/.claude/skills/git
 ```
 
 ### Project Configuration (.claude)
@@ -309,11 +364,13 @@ skills:
 skills:
   - ./skills/bigquery
   - ./skills/test-fully
+  - ./skills/git
 
 # Optional shortcuts
 commands:
   test: "Use /test-fully for comprehensive testing"
   bq: "Use /bigquery for BigQuery tasks"
+  g: "Use /git for Git operations"
 ```
 
 ---
@@ -348,6 +405,7 @@ cat ~/.claude/skills/skill-name/SKILL.md
 - **Development:** See [../docs/SKILLS_DEVELOPMENT.md](../docs/SKILLS_DEVELOPMENT.md)
 - **BigQuery:** See [bigquery/README.md](bigquery/README.md)
 - **Test-Fully:** See [test-fully/README.md](test-fully/README.md)
+- **Git:** See [git/README.md](git/README.md)
 
 ---
 
