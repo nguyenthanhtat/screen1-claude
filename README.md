@@ -57,24 +57,35 @@ Complete testing solution for any codebase covering unit, integration, E2E, and 
 
 ## 🚀 Quick Start for Team Members
 
-### Installation
+### Installation (Copy-Paste - Works Perfectly!)
 
-See [INSTALL.md](INSTALL.md) for detailed installation instructions.
-
-**Quick install:**
-
+**One-line install:**
 ```bash
-# Clone repository
+git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/claude-skills && cp -r ~/claude-skills/skills/bigquery ~/.claude/skills/ && cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/
+```
+
+**Or step-by-step:**
+```bash
+# 1. Clone repository
 git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/claude-skills
 
-# Copy skills to your Claude directory
+# 2. Copy skills to your Claude directory
 cp -r ~/claude-skills/skills/bigquery ~/.claude/skills/
 cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/
 
-# Test in Claude Code
+# 3. Test in Claude Code
 # Run: /bigquery
 # Run: /test-fully
 ```
+
+**Windows (PowerShell):**
+```powershell
+git clone https://github.com/nguyenthanhtat/screen1-claude.git $env:USERPROFILE\claude-skills
+Copy-Item -Recurse $env:USERPROFILE\claude-skills\skills\bigquery $env:USERPROFILE\.claude\skills\
+Copy-Item -Recurse $env:USERPROFILE\claude-skills\skills\test-fully $env:USERPROFILE\.claude\skills\
+```
+
+See [INSTALL.md](INSTALL.md) for more installation options.
 
 ### Usage
 
