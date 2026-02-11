@@ -1,118 +1,86 @@
 {
-  "name": "Screen1 Claude Skills",
+  "name": "screen1-claude-skills",
   "version": "1.2.0",
   "description": "Professional Claude Code skills for BigQuery, Testing, and Git workflows",
-  "author": "Nguyen Thanh Tat",
-  "repository": "https://github.com/nguyenthanhtat/screen1-claude",
-  "skills": [
+  "owner": {
+    "name": "Nguyen Thanh Tat",
+    "email": "nguyen@example.com",
+    "url": "https://github.com/nguyenthanhtat"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nguyenthanhtat/screen1-claude"
+  },
+  "plugins": [
     {
-      "name": "bigquery",
+      "id": "bigquery",
+      "name": "bigquery-skill-suite",
       "displayName": "BigQuery Skill Suite",
       "version": "2.0.0",
       "description": "Comprehensive BigQuery skills covering optimization, data loading, ML, security, and more. 8 specialized sub-skills for production BigQuery development.",
-      "path": "skills/bigquery",
+      "type": "skill",
+      "source": {
+        "type": "path",
+        "path": "skills/bigquery"
+      },
       "icon": "📊",
       "categories": ["data", "analytics", "database"],
       "tags": ["bigquery", "sql", "gcp", "data-engineering", "machine-learning"],
-      "features": [
-        "Query optimization and cost reduction",
-        "Data loading (CSV, JSON, Parquet, streaming)",
-        "BigQuery ML for machine learning",
-        "Scheduled queries and ETL automation",
-        "Cost monitoring and budget tracking",
-        "Security (RLS, IAM, audit logging)",
-        "Schema design with partitioning/clustering",
-        "Troubleshooting and debugging"
-      ],
-      "requirements": {
-        "tools": ["bq CLI or BigQuery client library"],
-        "services": ["Google Cloud Platform", "BigQuery API enabled"]
+      "author": {
+        "name": "Nguyen Thanh Tat",
+        "url": "https://github.com/nguyenthanhtat"
       },
-      "documentation": {
-        "readme": "skills/bigquery/README.md",
-        "quickStart": "skills/bigquery/QUICK_START.md",
-        "installation": "skills/bigquery/INSTALLATION.md"
-      }
+      "readme": "skills/bigquery/README.md",
+      "changelog": "skills/bigquery/CHANGELOG.md"
     },
     {
-      "name": "test-fully",
+      "id": "test-fully",
+      "name": "test-fully-skill",
       "displayName": "Test-Fully",
       "version": "1.0.0",
       "description": "Complete testing solution for any codebase. Generates comprehensive test suites covering unit, integration, E2E, and performance testing with automatic framework detection.",
-      "path": "skills/test-fully",
+      "type": "skill",
+      "source": {
+        "type": "path",
+        "path": "skills/test-fully"
+      },
       "icon": "🧪",
       "categories": ["testing", "quality", "development"],
       "tags": ["testing", "unit-tests", "integration-tests", "e2e", "jest", "pytest", "junit"],
-      "features": [
-        "Automatic framework detection (Jest, pytest, JUnit, Mocha, Vitest)",
-        "Multi-language support (JavaScript, Python, Java, Go, Ruby, C#, PHP, Rust)",
-        "Comprehensive test coverage (happy paths, edge cases, errors)",
-        "Unit, integration, E2E, and performance testing",
-        "Production-ready test code with best practices",
-        "Clear documentation and setup instructions"
-      ],
-      "requirements": {
-        "tools": ["Testing framework for your language"],
-        "languages": ["JavaScript", "TypeScript", "Python", "Java", "Go", "Ruby", "C#", "PHP", "Rust"]
+      "author": {
+        "name": "Nguyen Thanh Tat",
+        "url": "https://github.com/nguyenthanhtat"
       },
-      "documentation": {
-        "readme": "skills/test-fully/README.md",
-        "quickStart": "skills/test-fully/QUICK_START.md",
-        "installation": "skills/test-fully/INSTALLATION.md",
-        "structure": "skills/test-fully/STRUCTURE.md"
-      }
+      "readme": "skills/test-fully/README.md",
+      "changelog": "skills/test-fully/CHANGELOG.md"
     },
     {
-      "name": "git",
+      "id": "git",
+      "name": "git-skill-suite",
       "displayName": "Git Skill Suite",
       "version": "1.0.0",
       "description": "Comprehensive Git assistance for all workflows, from basics to advanced operations. 8 specialized sub-skills covering everything from fundamentals to power user features.",
-      "path": "skills/git",
+      "type": "skill",
+      "source": {
+        "type": "path",
+        "path": "skills/git"
+      },
       "icon": "🔧",
       "categories": ["version-control", "development", "collaboration"],
       "tags": ["git", "version-control", "github", "gitlab", "workflow", "branching"],
-      "features": [
-        "Repository basics (init, clone, commit, push, pull)",
-        "Branch management (create, merge, rebase, delete)",
-        "Commit history inspection (log, diff, blame, bisect)",
-        "Remote operations (push, pull, fork syncing)",
-        "Conflict resolution strategies",
-        "Undo and recovery with reflog",
-        "Team workflows (GitHub Flow, Git Flow, trunk-based)",
-        "Advanced features (stash, cherry-pick, hooks, worktrees, LFS)"
-      ],
-      "requirements": {
-        "tools": ["Git 2.30+"],
-        "services": ["Optional: GitHub, GitLab, or Bitbucket account"]
+      "author": {
+        "name": "Nguyen Thanh Tat",
+        "url": "https://github.com/nguyenthanhtat"
       },
-      "documentation": {
-        "readme": "skills/git/README.md",
-        "quickStart": "skills/git/QUICK_START.md",
-        "installation": "skills/git/INSTALLATION.md",
-        "structure": "skills/git/STRUCTURE.md"
-      }
+      "readme": "skills/git/README.md",
+      "changelog": "skills/git/CHANGELOG.md"
     }
   ],
-  "installation": {
-    "automated": {
-      "windows": "iwr -useb https://raw.githubusercontent.com/nguyenthanhtat/screen1-claude/main/install.ps1 | iex",
-      "unix": "curl -s https://raw.githubusercontent.com/nguyenthanhtat/screen1-claude/main/install.sh | bash"
-    },
-    "manual": {
-      "steps": [
-        "Clone repository: git clone https://github.com/nguyenthanhtat/screen1-claude.git",
-        "Copy skills to ~/.claude/skills/",
-        "Test with /bigquery, /test-fully, /git"
-      ]
-    }
-  },
-  "links": {
-    "homepage": "https://github.com/nguyenthanhtat/screen1-claude",
-    "issues": "https://github.com/nguyenthanhtat/screen1-claude/issues",
-    "documentation": "https://github.com/nguyenthanhtat/screen1-claude/blob/main/README.md",
-    "teamSetup": "https://github.com/nguyenthanhtat/screen1-claude/blob/main/TEAM_SETUP.md"
-  },
   "license": "MIT",
+  "homepage": "https://github.com/nguyenthanhtat/screen1-claude",
+  "bugs": {
+    "url": "https://github.com/nguyenthanhtat/screen1-claude/issues"
+  },
   "keywords": [
     "bigquery",
     "testing",
@@ -122,6 +90,7 @@
     "sql",
     "gcp",
     "automation",
-    "workflows"
+    "workflows",
+    "skills"
   ]
 }
