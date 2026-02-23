@@ -2,31 +2,21 @@
   "name": "screen1-claude-skills",
   "owner": {
     "name": "Nguyen Thanh Tat",
-    "email": "nguyen@example.com",
-    "url": "https://github.com/nguyenthanhtat"
+    "email": "nguyen@example.com"
   },
   "metadata": {
     "description": "Professional Claude Code skills for BigQuery, Testing, and Git workflows",
-    "version": "1.2.0",
-    "license": "MIT",
-    "homepage": "https://github.com/nguyenthanhtat/screen1-claude",
-    "tags": ["bigquery", "testing", "git", "gcp", "data-engineering"]
+    "version": "1.2.0"
   },
   "plugins": [
     {
       "name": "screen1-skills",
-      "version": "2.0.0",
-      "description": "BigQuery optimization, Testing automation, and Git workflows for professional development",
       "source": {
         "type": "url",
-        "url": "https://github.com/nguyenthanhtat/screen1-claude.git",
-        "branch": "main"
+        "url": "https://github.com/nguyenthanhtat/screen1-claude.git"
       },
-      "skills": [
-        { "name": "bigquery", "path": "skills/bigquery" },
-        { "name": "test-fully", "path": "skills/test-fully" },
-        { "name": "git", "path": "skills/git" }
-      ],
+      "description": "BigQuery optimization, Testing automation, and Git workflows for professional development",
+      "version": "2.0.0",
       "strict": true
     }
   ]
