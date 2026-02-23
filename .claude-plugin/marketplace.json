@@ -12,8 +12,8 @@
     {
       "name": "screen1-skills",
       "source": {
-        "source": "git",
-        "url": "https://github.com/nguyenthanhtat/screen1-claude.git"
+        "source": "github",
+        "repo": "nguyenthanhtat/screen1-claude"
       },
       "description": "BigQuery optimization, Testing automation, and Git workflows for professional development",
       "version": "2.0.0",
