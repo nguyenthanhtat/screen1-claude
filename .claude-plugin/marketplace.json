@@ -12,7 +12,7 @@
     {
       "name": "screen1-skills",
       "source": {
-        "type": "url",
+        "source": "url",
         "url": "https://github.com/nguyenthanhtat/screen1-claude.git"
       },
       "description": "BigQuery optimization, Testing automation, and Git workflows for professional development",
