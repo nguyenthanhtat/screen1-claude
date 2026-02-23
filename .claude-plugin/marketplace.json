@@ -1,54 +1,33 @@
 {
   "name": "screen1-claude-skills",
-  "version": "1.2.0",
-  "description": "Professional Claude Code skills for BigQuery, Testing, and Git workflows",
   "owner": {
     "name": "Nguyen Thanh Tat",
     "email": "nguyen@example.com",
     "url": "https://github.com/nguyenthanhtat"
   },
+  "metadata": {
+    "description": "Professional Claude Code skills for BigQuery, Testing, and Git workflows",
+    "version": "1.2.0",
+    "license": "MIT",
+    "homepage": "https://github.com/nguyenthanhtat/screen1-claude",
+    "tags": ["bigquery", "testing", "git", "gcp", "data-engineering"]
+  },
   "plugins": [
     {
-      "name": "bigquery-skill-suite",
+      "name": "screen1-skills",
       "version": "2.0.0",
-      "description": "Comprehensive BigQuery skills covering optimization, data loading, ML, security, and more",
+      "description": "BigQuery optimization, Testing automation, and Git workflows for professional development",
       "source": {
         "type": "url",
-        "url": "https://github.com/nguyenthanhtat/screen1-claude/tree/main/skills/bigquery"
+        "url": "https://github.com/nguyenthanhtat/screen1-claude.git",
+        "branch": "main"
       },
-      "tags": ["bigquery", "sql", "gcp", "data-engineering"],
-      "author": {
-        "name": "Nguyen Thanh Tat",
-        "url": "https://github.com/nguyenthanhtat"
-      }
-    },
-    {
-      "name": "test-fully-skill",
-      "version": "1.0.0",
-      "description": "Complete testing solution for any codebase with automatic framework detection",
-      "source": {
-        "type": "url",
-        "url": "https://github.com/nguyenthanhtat/screen1-claude/tree/main/skills/test-fully"
-      },
-      "tags": ["testing", "unit-tests", "e2e", "jest", "pytest"],
-      "author": {
-        "name": "Nguyen Thanh Tat",
-        "url": "https://github.com/nguyenthanhtat"
-      }
-    },
-    {
-      "name": "git-skill-suite",
-      "version": "1.0.0",
-      "description": "Comprehensive Git assistance for all workflows from basics to advanced operations",
-      "source": {
-        "type": "url",
-        "url": "https://github.com/nguyenthanhtat/screen1-claude/tree/main/skills/git"
-      },
-      "tags": ["git", "version-control", "github", "workflow"],
-      "author": {
-        "name": "Nguyen Thanh Tat",
-        "url": "https://github.com/nguyenthanhtat"
-      }
+      "skills": [
+        { "name": "bigquery", "path": "skills/bigquery" },
+        { "name": "test-fully", "path": "skills/test-fully" },
+        { "name": "git", "path": "skills/git" }
+      ],
+      "strict": true
     }
   ]
 }
