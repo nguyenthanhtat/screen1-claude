@@ -1,0 +1,10 @@
+{
+  "name": "screen1-skills",
+  "version": "2.0.0",
+  "description": "BigQuery optimization, Testing automation, and Git workflows for professional development",
+  "author": {
+    "name": "Nguyen Thanh Tat",
+    "email": "nguyen@example.com"
+  },
+  "skills": ["./skills/"]
+}
