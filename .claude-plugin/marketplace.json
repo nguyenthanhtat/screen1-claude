@@ -12,7 +12,10 @@
       "name": "bigquery-skill-suite",
       "version": "2.0.0",
       "description": "Comprehensive BigQuery skills covering optimization, data loading, ML, security, and more",
-      "source": "skills/bigquery",
+      "source": {
+        "type": "url",
+        "url": "https://github.com/nguyenthanhtat/screen1-claude/tree/main/skills/bigquery"
+      },
       "tags": ["bigquery", "sql", "gcp", "data-engineering"],
       "author": {
         "name": "Nguyen Thanh Tat",
@@ -23,7 +26,10 @@
       "name": "test-fully-skill",
       "version": "1.0.0",
       "description": "Complete testing solution for any codebase with automatic framework detection",
-      "source": "skills/test-fully",
+      "source": {
+        "type": "url",
+        "url": "https://github.com/nguyenthanhtat/screen1-claude/tree/main/skills/test-fully"
+      },
       "tags": ["testing", "unit-tests", "e2e", "jest", "pytest"],
       "author": {
         "name": "Nguyen Thanh Tat",
@@ -34,7 +40,10 @@
       "name": "git-skill-suite",
       "version": "1.0.0",
       "description": "Comprehensive Git assistance for all workflows from basics to advanced operations",
-      "source": "skills/git",
+      "source": {
+        "type": "url",
+        "url": "https://github.com/nguyenthanhtat/screen1-claude/tree/main/skills/git"
+      },
       "tags": ["git", "version-control", "github", "workflow"],
       "author": {
         "name": "Nguyen Thanh Tat",
