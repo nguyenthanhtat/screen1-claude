@@ -55,6 +55,23 @@ Complete testing solution for any codebase covering unit, integration, E2E, and 
 - **Java:** JUnit 5, JUnit 4, TestNG
 - **E2E:** Playwright, Cypress, Selenium, Puppeteer
 
+### Web Crawler Skill v1.0.0
+
+Crawl bất kỳ website nào và generate ra **Next.js website chạy được local** với layout responsive cho cả PC và mobile:
+
+- **Static crawler** - `crawler.py` cho site tĩnh (httpx + BeautifulSoup)
+- **JS crawler** - `crawler_playwright.py` cho SPA (React, Vue, Next.js)
+- **Site generator** - `generate_site.py` build Next.js 15 + Tailwind v4 + TypeScript project
+- **SQLite storage** - lưu pages/assets, dedupe theo URL hash
+- **Auto SEO** - tự động sinh metadata từ data đã crawl
+
+**Features:**
+- Responsive layout (mobile hamburger, desktop sticky sidebar)
+- Static Generation (SSG) — không cần server
+- Download images về local
+- Customizable primary color & site name
+- Rate limiting + robots.txt respect
+
 ### Git Skill Suite v1.0.0
 
 Comprehensive Git assistance for all workflows, from basics to advanced operations:
@@ -312,6 +329,15 @@ If you discover useful patterns:
 4. Submit a pull request
 
 ## 📝 Version History
+
+### v1.3.0 (2026-05-15)
+- Added Web Crawler Skill v1.0.0
+  - Static + JS-rendered website crawling (httpx, Playwright)
+  - SQLite-backed crawl storage with deduplication
+  - Next.js 15 + Tailwind v4 site generator
+  - Responsive PC/mobile layouts with SSG output
+  - Image downloading and primary-color customization
+  - Vietnamese trigger phrases for natural language invocation
 
 ### v1.2.0 (2025-02-11)
 - Added Git Skill Suite v1.0.0
