@@ -35,13 +35,11 @@ After extensive testing, Claude Code's marketplace.json schema is:
 **Quick Install (Recommended):**
 ```bash
 git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/claude-skills
-cp -r ~/claude-skills/skills/bigquery ~/.claude/skills/
 cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/
 ```
 
 **Test:**
 ```bash
-/bigquery
 /test-fully
 ```
 

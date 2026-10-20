@@ -6,7 +6,7 @@ Thank you for your interest in contributing! This guide will help you get starte
 
 - **Report issues** - Found a bug or have a suggestion? Open an issue
 - **Improve documentation** - Fix typos, clarify instructions, add examples
-- **Add patterns** - Share new BigQuery patterns you've discovered
+- **Add patterns** - Share new patterns you've discovered for existing skills
 - **Create skills** - Develop new Claude Code skills for other tools
 
 ## 🚀 Getting Started
@@ -30,7 +30,7 @@ git checkout -b feature/your-feature-name
 # Edit files, add new patterns, etc.
 
 # Test your changes
-cp -r skills/bigquery ~/.claude/skills/
+cp -r skills/git ~/.claude/skills/
 # Test with Claude Code
 ```
 
@@ -70,31 +70,15 @@ git push origin feature/your-feature-name
 
 ### BigQuery Patterns
 
-When adding new patterns to BigQuery skills:
-
-```markdown
-### Pattern X: [Clear Name]
-
-**Problem:** Describe the issue this solves
-
-**Solution:**
-\`\`\`sql
--- Optimized query
-SELECT ...
-\`\`\`
-
-**Why it works:** Explain the optimization
-
-**Savings:** Estimated cost/performance improvement
-```
+BigQuery skills moved to their own repo — contribute there: https://github.com/nguyenthanhtat/bigquery-skills
 
 ### Commit Messages
 
 Use clear, descriptive commit messages:
 
-- `Add: new cost optimization pattern for BigQuery`
+- `Add: new conflict resolution pattern for Git skill`
 - `Fix: typo in installation instructions`
-- `Update: BigQuery ML examples with latest API`
+- `Update: Test-Fully examples for Vitest`
 - `Docs: improve troubleshooting guide`
 
 ## 🧪 Testing
@@ -103,8 +87,8 @@ Before submitting:
 
 1. **Test the skill locally**
    ```bash
-   cp -r skills/bigquery ~/.claude/skills/
-   /bigquery [your test command]
+   cp -r skills/git ~/.claude/skills/
+   /git [your test command]
    ```
 
 2. **Verify documentation**
@@ -130,13 +114,13 @@ When reporting issues, include:
 **Example:**
 
 ```markdown
-**Issue:** Query optimization skill doesn't handle CTEs
+**Issue:** Git conflicts skill doesn't handle rebase conflicts
 
 **Steps:**
-1. Run `/bigquery optimize "WITH cte AS (...) SELECT * FROM cte"`
-2. Skill doesn't provide CTE-specific optimizations
+1. Run `/git/conflicts resolve conflict during rebase`
+2. Skill only explains merge conflicts
 
-**Expected:** Should analyze CTE usage and suggest optimizations
+**Expected:** Should explain `git rebase --continue` / `--abort` flow
 
 **Environment:** Claude Code v1.2.3, Windows 11
 ```
@@ -177,7 +161,6 @@ When reporting issues, include:
 
 ## 📚 Resources
 
-- [BigQuery Documentation](https://cloud.google.com/bigquery/docs)
 - [Claude Code Documentation](https://github.com/anthropics/claude-code)
 - [Skills Development Guide](docs/SKILLS_DEVELOPMENT.md)
 

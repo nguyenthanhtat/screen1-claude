@@ -21,9 +21,6 @@ fi
 mkdir -p ~/.claude/skills
 
 # Copy skills
-echo "📋 Installing BigQuery Skill Suite..."
-cp -r ~/claude-skills/skills/bigquery ~/.claude/skills/
-
 echo "📋 Installing Test-Fully Skill..."
 cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/
 
@@ -34,9 +31,9 @@ echo ""
 echo "✅ Installation complete!"
 echo ""
 echo "📖 Test your installation:"
-echo "   /bigquery"
 echo "   /test-fully"
 echo "   /git"
 echo ""
 echo "📚 Documentation: https://github.com/nguyenthanhtat/screen1-claude"
+echo "📊 BigQuery skills moved to: https://github.com/nguyenthanhtat/bigquery-skills"
 echo ""

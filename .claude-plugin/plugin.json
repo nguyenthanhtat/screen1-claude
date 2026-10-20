@@ -1,7 +1,7 @@
 {
   "name": "screen1-skills",
-  "version": "2.1.0",
-  "description": "BigQuery optimization, Testing automation, Git workflows, and Web Crawler → Next.js generator",
+  "version": "3.0.0",
+  "description": "Testing automation, Git workflows, and Web Crawler → Next.js generator",
   "author": {
     "name": "Nguyen Thanh Tat",
     "email": "nguyen@example.com"

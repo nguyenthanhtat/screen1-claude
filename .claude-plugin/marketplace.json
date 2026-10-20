@@ -5,7 +5,7 @@
     "email": "nguyen@example.com"
   },
   "metadata": {
-    "description": "Professional Claude Code skills for BigQuery, Testing, Git workflows, and Web Crawling",
+    "description": "Professional Claude Code skills for Testing, Git workflows, and Web Crawling",
     "version": "1.3.0"
   },
   "plugins": [
@@ -15,8 +15,8 @@
         "source": "github",
         "repo": "nguyenthanhtat/screen1-claude"
       },
-      "description": "BigQuery optimization, Testing automation, Git workflows, and Web Crawler → Next.js generator",
-      "version": "2.1.0",
+      "description": "Testing automation, Git workflows, and Web Crawler → Next.js generator",
+      "version": "3.0.0",
       "strict": true
     }
   ]

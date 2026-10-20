@@ -6,34 +6,9 @@ This repository is a development environment for creating Claude Code skills and
 
 ## Current Skills
 
-### BigQuery Skill Suite (v2.0.0)
+### BigQuery Skill Suite
 
-**Location:** `skills/bigquery/`
-**Status:** ✅ Installed to user skills
-**Type:** Multi-skill suite with main router
-
-**Structure:**
-- Main router: Analyzes keywords and routes to appropriate sub-skill
-- 8 specialized sub-skills covering all BigQuery features
-- Comprehensive documentation and examples
-
-**Usage:**
-```bash
-# Main router (auto-routing)
-/bigquery optimize my slow query
-
-# Direct sub-skill access
-/bigquery/query-optimization
-/bigquery/data-loading
-/bigquery/bqml
-/bigquery/scheduled-queries
-/bigquery/cost-monitoring
-/bigquery/security
-/bigquery/schema-design
-/bigquery/troubleshooting
-```
-
-See `skills/bigquery/DEPLOYMENT.md` for detailed installation and deployment instructions.
+Moved to its own plugin repo: https://github.com/nguyenthanhtat/bigquery-skills
 
 ## Development Workflow
 
@@ -106,7 +81,7 @@ skill-name/
 └── SKILL.md        # Single skill file
 ```
 
-### Complex Skill Suite (like BigQuery)
+### Complex Skill Suite (like Git)
 ```
 skill-name/
 ├── SKILL.md                 # Main router
@@ -231,7 +206,7 @@ Before deploying a skill, verify:
 
 ## Multi-Skill Suites
 
-For complex domains (like BigQuery), create a skill suite:
+For complex domains (like Git), create a skill suite:
 
 **Benefits:**
 - Organized by functionality
@@ -245,7 +220,7 @@ For complex domains (like BigQuery), create a skill suite:
 3. Comprehensive README
 4. Installation and deployment guides
 
-**Example:** See `skills/bigquery/` for reference implementation
+**Example:** See `skills/git/` for reference implementation
 
 ## Version Control
 

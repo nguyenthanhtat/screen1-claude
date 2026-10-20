@@ -2,6 +2,9 @@
 
 Quick guide for installing skills from this repository.
 
+> **BigQuery skills** moved to their own plugin: https://github.com/nguyenthanhtat/bigquery-skills
+> Install with `/plugin marketplace add nguyenthanhtat/bigquery-skills` then `/plugin install bigquery-skills@bigquery-skills`.
+
 ## Prerequisites
 
 - Claude Code installed and working
@@ -23,9 +26,6 @@ Choose the method that works best for you:
 git clone https://github.com/nguyenthanhtat/screen1-claude.git /tmp/claude-skills-temp
 
 # 2. Copy skills to your Claude directory
-# Install BigQuery skill
-cp -r /tmp/claude-skills-temp/skills/bigquery ~/.claude/skills/
-
 # Install Test-Fully skill
 cp -r /tmp/claude-skills-temp/skills/test-fully ~/.claude/skills/
 
@@ -33,11 +33,9 @@ cp -r /tmp/claude-skills-temp/skills/test-fully ~/.claude/skills/
 rm -rf /tmp/claude-skills-temp
 
 # 4. Verify installation
-ls ~/.claude/skills/bigquery/
 ls ~/.claude/skills/test-fully/
 
 # 5. Test in Claude Code
-# Run: /bigquery
 # Run: /test-fully
 ```
 
@@ -47,14 +45,12 @@ ls ~/.claude/skills/test-fully/
 git clone https://github.com/nguyenthanhtat/screen1-claude.git $env:TEMP\claude-skills-temp
 
 # 2. Copy skills
-Copy-Item -Recurse $env:TEMP\claude-skills-temp\skills\bigquery $env:USERPROFILE\.claude\skills\
 Copy-Item -Recurse $env:TEMP\claude-skills-temp\skills\test-fully $env:USERPROFILE\.claude\skills\
 
 # 3. Clean up
 Remove-Item -Recurse $env:TEMP\claude-skills-temp
 
 # 4. Test
-# Run: /bigquery
 # Run: /test-fully
 ```
 
@@ -71,19 +67,15 @@ git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/Development/scr
 
 # 2. Create symlink (Linux/Mac) or copy (Windows)
 # Linux/Mac - Using symlinks:
-ln -s ~/Development/screen1-claude/skills/bigquery ~/.claude/skills/bigquery
 ln -s ~/Development/screen1-claude/skills/test-fully ~/.claude/skills/test-fully
 
 # Windows (run as Administrator):
-# mklink /D "%USERPROFILE%\.claude\skills\bigquery" "%USERPROFILE%\Development\screen1-claude\skills\bigquery"
 # mklink /D "%USERPROFILE%\.claude\skills\test-fully" "%USERPROFILE%\Development\screen1-claude\skills\test-fully"
 
 # OR just copy (all platforms):
-cp -r ~/Development/screen1-claude/skills/bigquery ~/.claude/skills/
 cp -r ~/Development/screen1-claude/skills/test-fully ~/.claude/skills/
 
 # 3. Test
-# Run: /bigquery
 # Run: /test-fully
 ```
 
@@ -94,7 +86,6 @@ cd ~/Development/screen1-claude
 git pull origin master
 
 # Recopy if not using symlink
-cp -r skills/bigquery ~/.claude/skills/
 cp -r skills/test-fully ~/.claude/skills/
 ```
 
@@ -114,12 +105,10 @@ git clone https://github.com/nguyenthanhtat/screen1-claude.git .claude-skills
 # 3. Create .claude config file
 cat > .claude << 'EOF'
 skills:
-  - ./.claude-skills/skills/bigquery
   - ./.claude-skills/skills/test-fully
 EOF
 
 # 4. Test (must be in project directory)
-# Run: /bigquery
 # Run: /test-fully
 ```
 
@@ -143,7 +132,6 @@ cd /path/to/your/project
 git submodule add https://github.com/nguyenthanhtat/screen1-claude.git .claude-skills
 
 # 3. Copy skills to user directory
-cp -r .claude-skills/skills/bigquery ~/.claude/skills/
 cp -r .claude-skills/skills/test-fully ~/.claude/skills/
 
 # 4. Commit submodule
@@ -164,7 +152,6 @@ git submodule init
 git submodule update
 
 # Copy skills
-cp -r .claude-skills/skills/bigquery ~/.claude/skills/
 cp -r .claude-skills/skills/test-fully ~/.claude/skills/
 ```
 
@@ -174,7 +161,6 @@ cp -r .claude-skills/skills/test-fully ~/.claude/skills/
 git submodule update --remote
 
 # Recopy skills
-cp -r .claude-skills/skills/bigquery ~/.claude/skills/
 cp -r .claude-skills/skills/test-fully ~/.claude/skills/
 
 # Commit update
@@ -190,20 +176,12 @@ After installation, verify it works:
 
 ```bash
 # Check files exist
-ls ~/.claude/skills/bigquery/
 ls ~/.claude/skills/test-fully/
-
-# BigQuery should show:
-# SKILL.md, README.md, DEPLOYMENT.md, and sub-skill directories
 
 # Test-Fully should show:
 # SKILL.md, README.md, QUICK_START.md, INSTALLATION.md, STRUCTURE.md, .claude.example
 
 # Test in Claude Code
-# Open Claude Code and type: /bigquery
-# Should display skill information and sub-skills
-
-# Test Test-Fully skill
 # Type: /test-fully
 # Should activate the testing skill
 ```
@@ -214,18 +192,16 @@ ls ~/.claude/skills/test-fully/
 
 ### Skill Not Found
 
-**Symptom:** `/bigquery` or `/test-fully` returns "Unknown skill"
+**Symptom:** `/test-fully` returns "Unknown skill"
 
 **Solutions:**
 1. Verify installation path:
    ```bash
-   ls ~/.claude/skills/bigquery/SKILL.md
    ls ~/.claude/skills/test-fully/SKILL.md
    ```
 
 2. Check file exists and has content:
    ```bash
-   head ~/.claude/skills/bigquery/SKILL.md
    head ~/.claude/skills/test-fully/SKILL.md
    ```
 
@@ -296,7 +272,6 @@ Copy-Item -Recurse source-path $env:USERPROFILE\.claude\skills\
 
 1. Check [README.md](README.md) for overview
 2. Review skill documentation:
-   - [BigQuery README](skills/bigquery/README.md) for BigQuery usage
    - [Test-Fully Quick Start](skills/test-fully/QUICK_START.md) for testing
 3. See [SKILLS_DEVELOPMENT.md](docs/SKILLS_DEVELOPMENT.md) for development
 4. Open issue on GitHub
@@ -307,12 +282,6 @@ Copy-Item -Recurse source-path $env:USERPROFILE\.claude\skills\
 ## Next Steps
 
 After installation:
-
-**For BigQuery:**
-1. **Test the skill:** `/bigquery`
-2. **Try optimization:** `/bigquery optimize my query "SELECT ..."`
-3. **Read documentation:** `skills/bigquery/README.md`
-4. **Explore sub-skills:** Try each specialized skill
 
 **For Test-Fully:**
 1. **Test the skill:** `/test-fully`

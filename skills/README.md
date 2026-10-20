@@ -6,7 +6,7 @@ Custom Claude Code skills for extended functionality.
 
 ## What are Skills?
 
-Skills are specialized instructions that Claude can follow when users request specific actions. They appear as slash commands (e.g., `/bigquery`, `/test-fully`) and provide Claude with detailed knowledge about how to perform specific tasks.
+Skills are specialized instructions that Claude can follow when users request specific actions. They appear as slash commands (e.g., `/test-fully`, `/git`) and provide Claude with detailed knowledge about how to perform specific tasks.
 
 ### How Skills Work
 
@@ -125,50 +125,10 @@ describe('formatCurrency', () => {
 
 ---
 
-### 📊 bigquery v2.0.0
+### 📊 bigquery → moved
 
-**Comprehensive BigQuery development assistance**
-
-Complete BigQuery skill suite with 8 specialized sub-skills covering optimization, data loading, ML, security, and more. Perfect for data engineers and analysts working with Google BigQuery.
-
-#### Sub-Skills
-- **query-optimization** - Performance tuning and cost reduction
-- **data-loading** - Import/export operations (CSV, JSON, Parquet)
-- **bqml** - Machine learning with BigQuery ML
-- **scheduled-queries** - ETL automation and orchestration
-- **cost-monitoring** - Budget tracking and analysis
-- **security** - Row-level security, IAM, access control
-- **schema-design** - Table structure optimization with partitioning/clustering
-- **troubleshooting** - Debug errors and performance issues
-
-#### Features
-- Auto-routing based on keywords
-- Vietnamese market support (UTF-8, timezones)
-- Next.js integration examples
-- Multi-tenant patterns
-- Production-tested patterns
-
-#### Usage Examples
-
-```bash
-# Auto-routing (Claude decides which sub-skill)
-/bigquery my query is slow
-/bigquery load CSV from GCS
-/bigquery predict customer churn
-
-# Direct sub-skill access
-/bigquery/query-optimization check my query "SELECT ..."
-/bigquery/data-loading import CSV from gs://bucket/file.csv
-/bigquery/bqml create prediction model
-/bigquery/cost-monitoring show expensive queries
-```
-
-#### Documentation
-- **[README.md](bigquery/README.md)** - Complete usage guide
-- **[QUICK_START.md](bigquery/QUICK_START.md)** - Get started quickly
-- **[INSTALLATION.md](bigquery/INSTALLATION.md)** - Installation instructions
-- **[STRUCTURE.md](bigquery/STRUCTURE.md)** - Architecture overview
-- **[DEPLOYMENT.md](bigquery/DEPLOYMENT.md)** - Deployment guide
+The BigQuery skill suite now lives in its own plugin repo: https://github.com/nguyenthanhtat/bigquery-skills
+Install with `/plugin marketplace add nguyenthanhtat/bigquery-skills` then `/plugin install bigquery-skills@bigquery-skills`.
 
 ---
 
@@ -232,17 +192,14 @@ Complete Git skill suite with 8 specialized sub-skills covering everything from 
 git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/claude-skills
 
 # Copy skills to Claude directory
-cp -r ~/claude-skills/skills/bigquery ~/.claude/skills/
 cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/
 cp -r ~/claude-skills/skills/git ~/.claude/skills/
 
 # Verify installation
-ls ~/.claude/skills/bigquery/SKILL.md
 ls ~/.claude/skills/test-fully/SKILL.md
 ls ~/.claude/skills/git/SKILL.md
 
 # Test in Claude Code
-# Run: /bigquery
 # Run: /test-fully
 # Run: /git
 ```
@@ -331,19 +288,6 @@ npm test
 /test-fully improve coverage for users.js
 ```
 
-### Example: BigQuery + Testing
-
-```bash
-# 1. Optimize BigQuery query
-/bigquery/query-optimization optimize my query "SELECT ..."
-
-# 2. Test the optimized query
-/test-fully test query logic
-
-# 3. Set up cost monitoring
-/bigquery/cost-monitoring track this query
-```
-
 ---
 
 ## Configuration
@@ -352,7 +296,6 @@ npm test
 
 ```yaml
 skills:
-  - /Users/username/.claude/skills/bigquery
   - /Users/username/.claude/skills/test-fully
   - /Users/username/.claude/skills/git
 ```
@@ -362,14 +305,12 @@ skills:
 ```yaml
 # .claude file in your project root
 skills:
-  - ./skills/bigquery
   - ./skills/test-fully
   - ./skills/git
 
 # Optional shortcuts
 commands:
   test: "Use /test-fully for comprehensive testing"
-  bq: "Use /bigquery for BigQuery tasks"
   g: "Use /git for Git operations"
 ```
 
@@ -403,7 +344,7 @@ cat ~/.claude/skills/skill-name/SKILL.md
 - **General:** See [../README.md](../README.md)
 - **Installation:** See [../INSTALL.md](../INSTALL.md)
 - **Development:** See [../docs/SKILLS_DEVELOPMENT.md](../docs/SKILLS_DEVELOPMENT.md)
-- **BigQuery:** See [bigquery/README.md](bigquery/README.md)
+- **BigQuery:** See https://github.com/nguyenthanhtat/bigquery-skills
 - **Test-Fully:** See [test-fully/README.md](test-fully/README.md)
 - **Git:** See [git/README.md](git/README.md)
 

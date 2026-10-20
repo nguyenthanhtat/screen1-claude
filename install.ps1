@@ -23,9 +23,6 @@ if (!(Test-Path $skillsPath)) {
 }
 
 # Copy skills
-Write-Host "📋 Installing BigQuery Skill Suite..." -ForegroundColor Yellow
-Copy-Item -Recurse -Force "$repoPath\skills\bigquery" "$skillsPath\"
-
 Write-Host "📋 Installing Test-Fully Skill..." -ForegroundColor Yellow
 Copy-Item -Recurse -Force "$repoPath\skills\test-fully" "$skillsPath\"
 
@@ -36,9 +33,9 @@ Write-Host ""
 Write-Host "✅ Installation complete!" -ForegroundColor Green
 Write-Host ""
 Write-Host "📖 Test your installation:" -ForegroundColor Cyan
-Write-Host "   /bigquery" -ForegroundColor White
 Write-Host "   /test-fully" -ForegroundColor White
 Write-Host "   /git" -ForegroundColor White
 Write-Host ""
 Write-Host "📚 Documentation: https://github.com/nguyenthanhtat/screen1-claude" -ForegroundColor Cyan
+Write-Host "📊 BigQuery skills moved to: https://github.com/nguyenthanhtat/bigquery-skills" -ForegroundColor Cyan
 Write-Host ""

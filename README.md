@@ -10,25 +10,10 @@ Development and testing environment for Claude Code customizations before team-w
 
 ## 📦 Available Skills
 
-### BigQuery Skill Suite v2.0.0
+### BigQuery Skill Suite → moved
 
-Comprehensive BigQuery skills covering all major features:
-
-- **query-optimization** - Performance tuning and cost reduction
-- **data-loading** - Import/export operations (CSV, JSON, Parquet)
-- **bqml** - Machine learning with BigQuery ML
-- **scheduled-queries** - ETL automation and orchestration
-- **cost-monitoring** - Budget tracking and analysis
-- **security** - Row-level security, IAM, access control
-- **schema-design** - Table structure optimization with partitioning/clustering
-- **troubleshooting** - Debug errors and performance issues
-
-**Features:**
-- Auto-routing based on keywords
-- Vietnamese market support
-- Next.js integration examples
-- Multi-tenant patterns
-- Production-tested patterns
+The BigQuery skills now live in their own plugin repo: https://github.com/nguyenthanhtat/bigquery-skills
+Install with `/plugin marketplace add nguyenthanhtat/bigquery-skills` then `/plugin install bigquery-skills@bigquery-skills`.
 
 ### Test-Fully Skill v1.0.0
 
@@ -113,7 +98,7 @@ Then install the skills you want from the marketplace UI.
 
 **One-line install (Unix/Mac/Git Bash):**
 ```bash
-git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/claude-skills && cp -r ~/claude-skills/skills/bigquery ~/.claude/skills/ && cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/ && cp -r ~/claude-skills/skills/git ~/.claude/skills/
+git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/claude-skills && cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/ && cp -r ~/claude-skills/skills/git ~/.claude/skills/
 ```
 
 **Automated install scripts:**
@@ -131,12 +116,10 @@ iwr -useb https://raw.githubusercontent.com/nguyenthanhtat/screen1-claude/main/i
 git clone https://github.com/nguyenthanhtat/screen1-claude.git ~/claude-skills
 
 # 2. Copy skills to your Claude directory
-cp -r ~/claude-skills/skills/bigquery ~/.claude/skills/
 cp -r ~/claude-skills/skills/test-fully ~/.claude/skills/
 cp -r ~/claude-skills/skills/git ~/.claude/skills/
 
 # 3. Test in Claude Code
-# Run: /bigquery
 # Run: /test-fully
 # Run: /git
 ```
@@ -144,7 +127,6 @@ cp -r ~/claude-skills/skills/git ~/.claude/skills/
 **Windows (PowerShell):**
 ```powershell
 git clone https://github.com/nguyenthanhtat/screen1-claude.git $env:USERPROFILE\claude-skills
-Copy-Item -Recurse $env:USERPROFILE\claude-skills\skills\bigquery $env:USERPROFILE\.claude\skills\
 Copy-Item -Recurse $env:USERPROFILE\claude-skills\skills\test-fully $env:USERPROFILE\.claude\skills\
 Copy-Item -Recurse $env:USERPROFILE\claude-skills\skills\git $env:USERPROFILE\.claude\skills\
 ```
@@ -154,16 +136,6 @@ See [INSTALL.md](INSTALL.md) for more installation options.
 ### Usage
 
 Once installed, use in Claude Code:
-
-**BigQuery Skill:**
-```bash
-# Auto-routing (recommended)
-/bigquery my query is slow
-/bigquery load CSV from GCS
-/bigquery predict customer churn
-/bigquery setup daily ETL at 2am
-/bigquery analyze costs by tenant
-```
 
 **Test-Fully Skill:**
 ```bash
@@ -202,11 +174,6 @@ Once installed, use in Claude Code:
 ```
 screen1-claude/
 ├── skills/                    # All skills
-│   ├── bigquery/             # BigQuery skill suite
-│   │   ├── SKILL.md          # Main router
-│   │   ├── README.md         # Usage guide
-│   │   ├── DEPLOYMENT.md     # Deployment instructions
-│   │   └── [8 sub-skills]/   # Specialized skills
 │   ├── test-fully/           # Test-Fully skill
 │   │   ├── SKILL.md          # Core testing logic
 │   │   ├── README.md         # Usage guide
@@ -239,10 +206,6 @@ screen1-claude/
 - **[INSTALL.md](INSTALL.md)** - Installation guide for team members
 - **[docs/SKILLS_DEVELOPMENT.md](docs/SKILLS_DEVELOPMENT.md)** - How to create and maintain skills
 
-### BigQuery Skill
-- **[skills/bigquery/README.md](skills/bigquery/README.md)** - BigQuery skill usage
-- **[skills/bigquery/DEPLOYMENT.md](skills/bigquery/DEPLOYMENT.md)** - Deployment instructions
-
 ### Test-Fully Skill
 - **[skills/test-fully/QUICK_START.md](skills/test-fully/QUICK_START.md)** - Get started in 5 minutes
 - **[skills/test-fully/README.md](skills/test-fully/README.md)** - Complete usage guide
@@ -263,7 +226,6 @@ cd ~/claude-skills
 git pull origin master
 
 # Copy updated skills
-cp -r skills/bigquery ~/.claude/skills/
 cp -r skills/test-fully ~/.claude/skills/
 cp -r skills/git ~/.claude/skills/
 
@@ -280,15 +242,15 @@ git clone https://github.com/nguyenthanhtat/screen1-claude.git
 cd screen1-claude
 
 # Make changes to skills
-cd skills/bigquery
+cd skills/git
 # Edit SKILL.md files
 
 # Test locally
-cp -r ../bigquery ~/.claude/skills/
+cp -r ../git ~/.claude/skills/
 
 # Commit changes
 git add .
-git commit -m "Update BigQuery skill: description of changes"
+git commit -m "Update Git skill: description of changes"
 git push origin master
 ```
 
@@ -329,6 +291,9 @@ If you discover useful patterns:
 4. Submit a pull request
 
 ## 📝 Version History
+
+### v3.0.0 (2026-10-20)
+- BigQuery Skill Suite moved to [nguyenthanhtat/bigquery-skills](https://github.com/nguyenthanhtat/bigquery-skills)
 
 ### v1.3.0 (2026-05-15)
 - Added Web Crawler Skill v1.0.0
@@ -375,7 +340,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🆘 Support
 
 **For Skill Usage Questions:**
-- BigQuery: Check `skills/bigquery/README.md` or use `/bigquery/troubleshooting`
+- BigQuery: See https://github.com/nguyenthanhtat/bigquery-skills
 - Test-Fully: Check `skills/test-fully/README.md` or `skills/test-fully/QUICK_START.md`
 - Git: Check `skills/git/README.md` or `skills/git/QUICK_START.md`
 - General: Review `docs/SKILLS_DEVELOPMENT.md`
@@ -388,7 +353,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🔗 Links
 
 - **Claude Code**: https://github.com/anthropics/claude-code
-- **BigQuery Documentation**: https://cloud.google.com/bigquery/docs
 
 ---
 
