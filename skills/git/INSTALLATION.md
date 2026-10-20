@@ -106,7 +106,7 @@ If you're using the screen1-claude repository:
 .\install.ps1
 ```
 
-These scripts install all skills (BigQuery, Test-Fully, and Git).
+These scripts install the Test-Fully and Git skills.
 
 ## Configuration
 

@@ -257,23 +257,23 @@ testPreferences:
 
 ## Multiple Skills Installation
 
-If you want both BigQuery and test-fully skills:
+If you want both git and test-fully skills:
 
 ```yaml
 # .claude
 skills:
-  - ./skills/bigquery
+  - ./skills/git
   - ./skills/test-fully
 ```
 
 Or with global installation:
 ```bash
 # Windows
-Copy-Item -Recurse ".\screen1-claude\skills\bigquery" "$env:USERPROFILE\.claude\skills\bigquery"
+Copy-Item -Recurse ".\screen1-claude\skills\git" "$env:USERPROFILE\.claude\skills\git"
 Copy-Item -Recurse ".\screen1-claude\skills\test-fully" "$env:USERPROFILE\.claude\skills\test-fully"
 
 # macOS/Linux
-cp -r ./screen1-claude/skills/bigquery ~/.claude/skills/
+cp -r ./screen1-claude/skills/git ~/.claude/skills/
 cp -r ./screen1-claude/skills/test-fully ~/.claude/skills/
 ```
 

@@ -1,3 +1,10 @@
+---
+name: git
+description: "Git expertise for everyday and advanced work: commits, branching, merging and rebasing, history/blame/bisect, remotes and forks, conflict resolution, undoing mistakes and recovering lost work, team workflows (GitHub Flow, Git Flow), stash, cherry-pick, hooks. Use when the user asks how to do something with git, is stuck in a git state, has a merge/rebase conflict, or wants to undo or recover changes."
+---
+
+> **Sub-skills are files in this skill's folder.** The `/git/<name>` paths below are routing labels, not commands: after choosing a sub-skill from the decision tree, read `<name>/SKILL.md` next to this file (e.g. `basics/SKILL.md`, `conflicts/SKILL.md`) and follow it.
+
 # Git Skill Suite
 
 ## Purpose

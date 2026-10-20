@@ -1,3 +1,8 @@
+---
+name: test-fully
+description: "Generate comprehensive test suites for any codebase: unit, integration, end-to-end, and performance tests. Detects the existing test framework (Jest, Vitest, Pytest, JUnit, Go test, Playwright, etc.) and follows its conventions. Use when the user asks to write, add, or update tests for a file, module, or feature, or to raise test coverage."
+---
+
 # Test Fully - Comprehensive Testing Skill
 
 ## Version

@@ -20,7 +20,7 @@ skills:
   # - ./.claude/screen1-claude/skills/test-fully
 
   # Add other skills as needed
-  # - ./skills/bigquery
+  # - ./skills/git
   # - ./skills/custom-skill
 
 # ============================================================================

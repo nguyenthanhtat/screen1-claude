@@ -692,23 +692,19 @@ When updating test patterns:
 
 ## Integration with Other Skills
 
-### With BigQuery Skill
+### With BigQuery Skills
 
-```yaml
-# .claude
-skills:
-  - ./skills/bigquery
-  - ./skills/test-fully
+Install the separate plugin (https://github.com/nguyenthanhtat/bigquery-skills):
 
-# Use together
-commands:
-  test-bq: "Use /test-fully to test BigQuery queries, then /bigquery to optimize"
+```
+/plugin marketplace add nguyenthanhtat/bigquery-skills
+/plugin install bigquery-skills@bigquery-skills
 ```
 
 **Example Workflow:**
 1. Write BigQuery query
 2. `/test-fully query.sql` - Generate data quality tests
-3. `/bigquery/query-optimization` - Optimize query
+3. `/bigquery-skills:bigquery-query-optimization` - Optimize query
 4. Run tests to verify optimization didn't break logic
 
 ### With Other Testing Tools

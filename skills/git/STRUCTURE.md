@@ -4,7 +4,7 @@ Understanding the design and structure of the Git skill suite.
 
 ## Overview
 
-The Git skill suite uses a **router architecture** with 8 specialized sub-skills, similar to the BigQuery skill suite. This design provides comprehensive Git coverage while keeping each skill focused and maintainable.
+The Git skill suite uses a **router architecture** with 8 specialized sub-skills. This design provides comprehensive Git coverage while keeping each skill focused and maintainable.
 
 ## Architecture Pattern
 
@@ -310,7 +310,7 @@ Feature Development:
 ### Related Skills
 
 The Git skill complements:
-- **BigQuery skill** - Version control for queries
+- **BigQuery skills** ([separate plugin](https://github.com/nguyenthanhtat/bigquery-skills)) - Version control for queries
 - **Test-Fully skill** - Version control for tests
 - **Any development skill** - Git is fundamental
 
