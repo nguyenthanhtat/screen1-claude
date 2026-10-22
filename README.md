@@ -87,12 +87,13 @@ Comprehensive Git assistance for all workflows, from basics to advanced operatio
 
 ### Option 1: Marketplace (Easiest!)
 
-Add as a marketplace source in Claude Code:
+In Claude Code:
 ```
-https://github.com/nguyenthanhtat/screen1-claude
+/plugin marketplace add nguyenthanhtat/screen1-claude
+/plugin install screen1-skills@screen1-claude-skills
 ```
 
-Then install the skills you want from the marketplace UI.
+BigQuery skills are a separate plugin: [nguyenthanhtat/bigquery-skills](https://github.com/nguyenthanhtat/bigquery-skills).
 
 ### Option 2: Automated Scripts
 
@@ -189,7 +190,7 @@ screen1-claude/
 │       ├── STRUCTURE.md      # Architecture docs
 │       ├── .claude.example   # Config template
 │       └── [8 sub-skills]/   # basics, branching, history, etc.
-├── commands/                  # Custom commands (future)
+├── docs/COMMANDS.md           # How to add custom commands
 ├── tests/                     # Test suite (future)
 ├── docs/                      # Documentation
 │   └── SKILLS_DEVELOPMENT.md # Development guide

@@ -2,7 +2,7 @@
   "name": "screen1-claude-skills",
   "owner": {
     "name": "Nguyen Thanh Tat",
-    "email": "nguyen@example.com"
+    "email": "dev@lastclarity.com"
   },
   "metadata": {
     "description": "Professional Claude Code skills for Testing, Git workflows, and Web Crawling",
@@ -16,7 +16,7 @@
         "repo": "nguyenthanhtat/screen1-claude"
       },
       "description": "Testing automation, Git workflows, and Web Crawler → Next.js generator",
-      "version": "3.1.0",
+      "version": "3.1.1",
       "strict": true
     }
   ]
